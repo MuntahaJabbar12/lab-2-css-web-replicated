@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Your Degree | DePaul University - Chicago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo-container">
+    <img src="images/DPU-logo.png" alt="University Logo" class="logo">
+  </div>
+
+  <!-- checkbox hack -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+    <span></span> <!-- hamburger lines via CSS -->
+  </label>
+
+  <div class="nav-links" id="main-menu" role="menu">
+    <a href="#" role="menuitem">Home</a>
+    <a href="#" role="menuitem">Admissions</a>
+    <a href="#" role="menuitem">Campuses</a>
+    <a href="#" role="menuitem">Student</a>
+    <a href="#" role="menuitem">Services</a>
+  </div>
+</nav>
+
+<div class="marquee">
+  <p><b> Welcome to DePaul University – Admissions Open Now! </b></p>
+</div>
+
+<div class="image-container">
+  <img src="images/header.jpg" alt="Header Image">
+
+  <div class="text-on-image">
+    <h2>EARN YOUR DEGREE IN THE HEART OF CHICAGO.</h2>
+    <p>STUDY AT A PREMIER INSTITUTION FOR INTERNATIONAL STUDENTS</p>
+
+    <div class="btn-container">
+      <a href="#" class="btn red-btn">Undergraduate Info</a>
+      <a href="#" class="btn blue-btn">Graduate Info</a>
+    </div>
+  </div>
+</div>
+<div class="info-grid">
+  <div class="info-box">
+    <img src="images/box1.png" alt="Alumni Icon">
+    <h3>195K alumni</h3>
+    <p>Join a network of more than 195,000 successful DePaul alumni around the world</p>
+  </div>
+
+  <div class="info-box">
+    <img src="images/box2.png" alt="Programs Icon">
+    <h3>300+</h3>
+    <p>We offer more than 300 respected undergraduate majors and graduate programs to advance your education</p>
+  </div>
+
+  <div class="info-box">
+    <img src="images/box3.png" alt="Students Icon">
+    <h3>100+</h3>
+    <p>DePaul students come from more than 100 countries</p>
+  </div>
+</div>
+
+<div class="content-section">
+  <div class="image-side">
+    <img src="images/kids.jpg" alt="Students Image">
+  </div>
+  <div class="text-side">
+    <h2>Excellent Preparation for Your Future</h2>
+    <p>
+      DePaul is the ideal place to study for international students. Set in the heart of Chicago —
+      the USA's third largest city — you'll make long lasting connections here as you get a 
+      world-class education that will prepare you for your career. DePaul recently ranked among 
+      the top 10 for internship opportunities by U.S.News & World Report, giving our students 
+      hands-on real-world experience. And more than 90 percent of our graduates are employed 
+      or continuing their education within six months of graduation.
+    </p>
+  </div>
+</div>
+
+<div  class="heading-next">
+			<div >
+				<h3>Request more information today</h3>
+			</div>
+
+ <div class="program-grid">
+  <div class="program-box">
+    <h2 class="program-number">130+</h2>
+    <h3 class="program-title">Undergraduate Majors</h3>
+    <p>No matter what you want to study, you'll find it here at DePaul.</p>
+    <p>
+      <button class="btn">
+        Undergraduate Info
+      </button>
+    </p>			
+  </div>
+
+  <div class="program-box">
+    <h2 class="program-number">175+</h2>
+    <h3 class="program-title">Graduate Program Majors</h3>
+    <p>Gain the skills to advance your career and prepare you for long-term success.</p>
+    <p>
+      <button class="btn">
+        Graduate Info
+      </button>
+    </p>
+  </div>
+</div>
+ <h3 class="heading-next">Explore DEPAUL through our featured videos.</h3>
+<div class="iframegrid">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QHTxhDNAr2A?si=v7P_TC5TPMGOdAim" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z--QSrnZcis?si=YcKVVfXPR8RVkZj3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+<!-- Add a Request Info button (this will open the popover/modal) -->
+<div class="request-info-wrapper">
+  <!-- popovertarget attribute opens the popover with id "infoModal" -->
+  <button popovertarget="infoModal" class="btn red-btn">Request Info</button>
+</div>
+
+<!-- Modal using HTML Popover API -->
+<div id="infoModal" popover role="dialog" aria-modal="true" aria-labelledby="infoModalTitle" class="popover-modal">
+  <h2 id="infoModalTitle">Request More Information</h2>
+  <p>Fill this short form to get details about programs, admissions and fees.</p>
+
+  <!-- simple form (no JS) -->
+  <form class="modal-form" action="#" method="post" onsubmit="return false;">
+    <label>
+      Name<br>
+      <input type="text" name="name" placeholder="Your name" required>
+    </label>
+    <label>
+      Email<br>
+      <input type="email" name="email" placeholder="you@example.com" required>
+    </label>
+    <label>
+      Program of Interest<br>
+      <select name="program">
+        <option>Undergraduate</option>
+        <option>Graduate</option>
+      </select>
+    </label>
+
+    <div class="modal-actions">
+      <!-- this button toggles (hides) the popover in supported browsers -->
+      <button popovertarget="infoModal" popovertargetaction="hide" type="button" class="btn">Close</button>
+      <button type="submit" class="btn blue-btn">Submit</button>
+    </div>
+  </form>
+</div>
+
+<h3>DePaul University</h3>
+<footer class="uni-footer">
+  <div class="footer-container">
+
+    <!-- Left: University Info -->
+    <div class="footer-about">
+      
+      <ul class="footer-links">
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">Request Info</a></li>
+        <li><a href="#">Visit Campus</a></li>
+        <li><a href="#">Directory</a></li>
+      </ul>
+    </div>
+
+    <!-- Middle: Address -->
+    <div class="footer-contact">
+      <p>1 E. Jackson Blvd.<br>Chicago, IL 60604<br>USA</p>
+      <p>+1 (312) 362-8000</p>
+    </div>
+
+    <!-- Right: Extra Links -->
+    <div class="footer-extra">
+      <ul class="footer-links">
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Athletics</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>2001-2023 DePaul University | 
+      <a href="#">Disclaimer</a> | 
+      <a href="#">Contact Us</a> | 
+      <a href="#">Emergency Plan</a> | 
+      <a href="#">Consumer Information</a> | 
+      <a href="#">Privacy Statement</a>
+    </p>
+  </div>
+</footer>
+
+
+</div>
+
+
+</body>
+</html>
